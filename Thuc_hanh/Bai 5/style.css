@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 20px;
+  border: 1px solid black;
+  width: 300px;
+  padding: 5px 15px;
+}
+
+.container__input {
+  display: flex;
+  flex-direction: column;
+}
+
+#input-text,
+#input-select {
+  flex: 1;
+}
+
+#input-select {
+  margin: 0;
+}
+label {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+span {
+  width: 30%;
+}
+
+.container__button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.button-excute,
+.button-cancel {
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+}
+.button-excute {
+}
+.button-cancel {
+  background-color: white;
+  margin-left: 5px;
+}

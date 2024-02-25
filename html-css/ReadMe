@@ -1,0 +1,135 @@
+11/1/2023
+
+<a></a>
+attribute :
+
+- href = đường dẫn tương đối hoặc tuyệt đối
+- target = blank|self , self is default , blank is open other tab
+- name = name of link , specify name for link (create bookmark)
+- title = show the title on the browser of link
+
+inner image
+<img src="" border="" width=""  height="" title="" alt="">  b 
+
+responsive image in html 5
+<picture>
+
+<source media="" srcset="">
+--media is responsive with device
+(break point > 768px is tablet)
+(key for searching : responsive break point) - have to img tag to browser understand picture tag
+<img src="" alt="">
+</picture>
+
+table
+
+<table></table> -- define a table; attribute: border , width , cellpadding(space between cell and border) , cellspacing(space between cell )
+<thead></thead> heading of table
+<tbody></tbody>
+<tr></tr> define row in table
+<td></td> define a cell in row ; attribute : width , colspan(the number of cell that cell get in the row - số ô mà ô này chiếm theo chiều ngang) , rowspan(the number of line that cell get in the - sô dòng mà ô này chiếm theo chiều dọc)
+giữa các hàng khác nhau thì colspan phải bằng nhau
+
+form
+attribute : method , action(link url) , enctype = (application/x-www-form-urlencoded || multipart/form-data -- form chứa nhiều thành phần thuộc loại khác nhau vd file .... khi sever nhận sẽ đọc name : value || text/plain -- văn bản thông thường) quy định dữ liệu , sắp xếp dữ liệu được gửi đi
+
+-- thành phần trong form
+<input name="" id="" type="text || password || hidden || checkbox || radio || button || submit || reset || file" maxlength="" value="" checked="" multiple="">
+secure socket layer
+
+<textarea name="" id="" cols="30" rows="10"></textarea> nhập văn bản nhiều dòng; attribute : name , value , maxlength , row , cols : số dòng số cột hiển thị
+
+ <select name="" id="">
+    <option value="" selected></option>
+ </select> thể hiện 1 combobox  , listbox ; attribute : name , value , multiple(líst bõx cho phép chọn nhiều mục) , size(số mục hiển thị trong listbox) 
+
+ khi có 5 lựa chọn trở xuống thì nên hiển thị luôn trong 1 lần , còn nhiều hơn 5 mục thì ngược lại 
+
+ bài tập đánh giá A11 thay thế radio button trong vd trên bằng combobox viết lại mã lệnh của vd 
+
+18/1/2024 cascading style sheet 
+
+là 1 ngôn ngữ để định nghĩa cách trình bày thể hiển nội dung của HTML or XML
+được công nhận bởi w3c 
+cách áp dụng css vào trang web 
+inline css 
+internal css 
+external css 
+
+
+@media query là 1 kỹ thuật trong css để áp dụng css có điều kiện xác định về tính chất của thiết bị 
+
+useage 
+
+@media list-of-media-query { 
+   ;  css code 
+
+}
+@import url list-of-media-queries // viết ở đầu file css 
+  - list-of-media-queries = not|only mediatype 
+   mediaType : screen | sprint | speech | all 
+   mediaFuture : có thể viết dưới dạng các thuộc tính sau 
+      width , min-width , max-width 
+      height , min-weight , maxweight 
+      resolution , orientation
+thuộc tính media=" " trong các thẻ html stl
+
+vd mediaquery 
+
+body { 
+   background-color : white 
+}
+
+@media screen and (min-width: 400px) { 
+   body { 
+      background-color : black
+   }
+}
+href="./index.html2"
+@media="screen and (max-width : 768px)"
+
+href="./index.html"
+@media="screen and (min-width : 769px)"
+
+thứ tự ưu tiên áp dụng 
+   property : value !important
+   inline css -> internal css -> external css 
+   cách xác đihnj bằng css specify 
+   
+   thành phần áp dụng    mức ưu tiên 
+   inline style          1000
+   IDs                   100
+   classes , atributes   10
+   psedouclass
+   element & psedo-element 1
+
+
+css 
+   font-variant : small-caps 
+   
+   - thuộc tính text 
+   text-align : center | left | right | justify (căn theo chiều ngang )
+   text-decoration : underline | overline | line-through | none
+   text-transform : normal | lowercase | uppercase | capitalize 
+   text-indent : khoảng thụt đầu dòng 
+   vertical-align : top | bottom | middle (căn theo chiều dọc)
+   
+   - thuộc tínhn nền 
+   background-attachment : scroll | fixed 
+   background-position : top | center | bottom | left | right
+   background-repeat : repeat | repeat-x | repeat-y | no-repeat 
+
+   border : [style][width][color]
+
+   position : absolute | relative | static 
+   top | left : tọa độ gốc là  góc trên  bên trái  top là trục y lèft là trục x
+   width | height : độ rộng , chiều cao 
+   display : block | inline | list-item | table | none... 
+   visibility : visible | hidden
+   float : left | right | none
+   clear : left | right | both  
+   box-sizing : content-box | border-box
+
+
+
+

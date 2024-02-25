@@ -1,0 +1,14 @@
+* { 
+    box-sizing: border-box;
+    background-color: #FFD57A;
+}
+.container { 
+    display: flex ;
+
+}
+h1 { 
+    color :red
+}
+.item{ 
+    width: 50%;
+}
