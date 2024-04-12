@@ -37,22 +37,19 @@ namespace electronic_store
             ListProduct_BSL.Add(new Objects.products("BS5", "tronsmart-element-mega-bluetooth-speaker-black-1571991584812._w280_p1_", "Tronsmart Element Mega SoundPulse™ Bluetooth 5.0 Speaker", 35.76, 54.46, 948));
             Application["ListProduct_BSL"] = ListProduct_BSL;
 
-            List<Objects.products> listProduct_PB = new List<Objects.products>();
-            listProduct_PB.Add(new Objects.products("PB1", "INSE-P20-5-in-1-Dog-Clipper-Vacuum-521459-0._w280_", "", 85, 107, 199));
-            listProduct_PB.Add(new Objects.products("PB2", "Outdoor-Sports-Fanny-Pack-522193-0._w280_", "", 89, 105, 198));
-            listProduct_PB.Add(new Objects.products("PB3", "FOSSiBOT-F2400-2048Wh-Portable-Power-Station-Black-UK-Plug-523374-7._w280_", "", 4.62, 8.68, 187));
-            listProduct_PB.Add(new Objects.products("PB4", "ouvis-amr5-mini-pc--amd-ryzen-7-5700u-eu-bdc6e3-1695107508087._w280_", "", 255, 324, 190));
-            listProduct_PB.Add(new Objects.products("DD5", "ESSAGER-EXCMTL-JJ03-P-100W-3-in-1-USB-Data-Cable-Black-523797-0._w280_", "", 5.28, 14.61, 100));
-            listProduct_PB.Add(new Objects.products("DD6", "duotts-c29-electric-bike-29-inch-750w-48v-15ah-50km-h-with-rear-rack-289d6b-1709806782169._w280_", "", 755, 903, 199));
-            listProduct_PB.Add(new Objects.products("DD1", "INSE-P20-5-in-1-Dog-Clipper-Vacuum-521459-0._w280_", "", 85, 107, 199));
-            listProduct_PB.Add(new Objects.products("DD2", "Outdoor-Sports-Fanny-Pack-522193-0._w280_", "", 89, 105, 198));
-            listProduct_PB.Add(new Objects.products("DD3", "FOSSiBOT-F2400-2048Wh-Portable-Power-Station-Black-UK-Plug-523374-7._w280_", "", 4.62, 8.68, 187));
-            listProduct_PB.Add(new Objects.products("DD4", "ouvis-amr5-mini-pc--amd-ryzen-7-5700u-eu-bdc6e3-1695107508087._w280_", "", 255, 324, 190));
-            listProduct_PB.Add(new Objects.products("DD5", "ESSAGER-EXCMTL-JJ03-P-100W-3-in-1-USB-Data-Cable-Black-523797-0._w280_", "", 5.28, 14.61, 100));
-            listProduct_PB.Add(new Objects.products("DD6", "duotts-c29-electric-bike-29-inch-750w-48v-15ah-50km-h-with-rear-rack-289d6b-1709806782169._w280_", "", 755, 903, 199));
-            Application["listProduct_PB"] = listProduct_PB;
+            List<Objects.products> listProduct_Anbernic = new List<Objects.products>();
+            listProduct_Anbernic.Add(new Objects.products("AB1", "ANBERNIC-RG35XX-Plus-Game-Console-128GB---Transparent-Black-522982-0._w280_p1_", "ANBERNIC RG35XX Plus Game Console", 60.96, 73.15, 0));
+            listProduct_Anbernic.Add(new Objects.products("AB2", "ANBERNIC-RG35XX-H-Game-Console-64GB-128GB---Black-523294-0._w280_p1_", "ANBERNIC RG35XX H Game Console", 65.02, 77.22, 0));
+            listProduct_Anbernic.Add(new Objects.products("AB3", "anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_", "ANBERNIC RG35XX Game Console 64GB", 38.20, 55.43, 0));
+            listProduct_Anbernic.Add(new Objects.products("AB4", "ANBERNIC-RG556-Game-Console-8-128GB-256GB-TF-Card---Black-523768-0._w280_p1_", "ANBERNIC RG556 Game Console with 8714 Games", 255, 324, 0));
+            Application["listProduct_Anbernic"] = listProduct_Anbernic;
 
-
+            List<Objects.products> listProduct_Tronsmart = new List<Objects.products>();
+            listProduct_Tronsmart.Add(new Objects.products("PB5", "tronsmart-bang-se-bluetooth-party-speaker-81e45a-1671617430909._w280_p1_", "Tronsmart Bang SE Bluetooth Party Speaker 3", 56.89, 73.15, 0));
+            listProduct_Tronsmart.Add(new Objects.products("PB6", "tronsmart-element-mega-bluetooth-speaker-black-1571991584812._w280_p1_", "Tronsmart Element Mega SoundPulse™ Bluetooth 5.0 Speaker with Powerfu", 35.76, 54.46, 0));
+            listProduct_Tronsmart.Add(new Objects.products("PB7", "tronsmart-t2-plus-20w--bluetooth-5-0-speaker-tws-1571994588089._w280_p1_", "Tronsmart T2 Plus 20W Bluetooth 5.0 Speaker", 26.82, 34.95, 0));
+            listProduct_Tronsmart.Add(new Objects.products("PB8", "Tronsmart-T7-Lite-519845-0._w280_p1_", "Tronsmart T7 Lite 24W Portable Bluetooth", 31.81, 40.64, 0));
+            Application["listProduct_Tronsmart"]= listProduct_Tronsmart;
         }
 
         protected void Session_Start(object sender, EventArgs e)

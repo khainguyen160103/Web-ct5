@@ -16,17 +16,17 @@ namespace electronic_store
             foreach (Objects.products product in listProductDD)
             {
                 htmlDD += "<div class=\"deal - product - item col l-2 m - 4 c - 6\"> " +
-                        "<img src = \"./Image/DealDay/"+product.image+".jpg\"" + " alt = \"+"+product.image+"\" class=\"deal-item-img\" />" +
-                        "<span class=\"deal-item-dealOff\">"+ product.caculateDiscountPercentage()+"% OFF</span>" +
+                        "<img src = \"./Image/DealDay/" + product.image + ".jpg\"" + " alt = \"+" + product.image + "\" class=\"deal-item-img\" />" +
+                        "<span class=\"deal-item-dealOff\">" + product.caculateDiscountPercentage() + "% OFF</span>" +
                         "<div class=\"deal-item-price\"> " +
-                           " <span class=\"deal-price-origin\">"+product.price_discounted+"$</span> " +
-                           " <span class=\"deal-price-saleOff\">"+product.price_origin+"$</span>" +
+                           " <span class=\"deal-price-origin\">" + product.price_discounted + "$</span> " +
+                           " <span class=\"deal-price-saleOff\">" + product.price_origin + "$</span>" +
                         "</div>" +
                         "<div class=\"item-claimed\"> " +
                              "<div class=\"claimed-barBox\"> " +
                                 "<div class=\"bar\"></div>" +
                             "</div>" +
-                            "<span class=\"claimed-left\">"+product.sold+" left</span>" +
+                            "<span class=\"claimed-left\">" + product.sold + " left</span>" +
                         "</div>" +
                     "</div>";
             }
@@ -36,13 +36,13 @@ namespace electronic_store
             string htmlN = "";
             foreach (Objects.products product in listProductN)
             {
-                htmlN +=   "<li class=\" col l-3 m-6 c-6\">" + 
-                       " <div class=\"new-product-item\">" + 
-                            "<a href = \"\" class=\"new-item-link\">" + 
-                                "<img class=\"new-item-img\" src=\"./Image/NewItem/"+ product.image +".jpg\""+" alt=\"\"> " + 
-                            "</a>"+
-                            "<span class=\"new-item-header\">"+product.description+"</span>"+
-                            "<span class=\"new-item-price\">"+product.price_origin+"$</span>"+
+                htmlN += "<li class=\" col l-3 m-6 c-6\">" +
+                       " <div class=\"new-product-item\">" +
+                            "<a href = \"\" class=\"new-item-link\">" +
+                                "<img class=\"new-item-img\" src=\"./Image/NewItem/" + product.image + ".jpg\"" + " alt=\"" + product.description + "\"> " +
+                            "</a>" +
+                            "<span class=\"new-item-header\">" + product.description + "</span>" +
+                            "<span class=\"new-item-price\">" + product.price_origin + "$</span>" +
                         "</div>" +
                     "</li>";
             }
@@ -52,13 +52,13 @@ namespace electronic_store
             string htmlBSL = "";
             foreach (Objects.products product in listProductBSL)
             {
-                htmlBSL += "<li class=\" col l-2-4 m-4 c-12\">"+
-                        "<div class=\"bestSeller-product-item\">"+
-                            "<a href = \"\" class=\"bestSeller-item-link\">"+
-                               "<img src = \"./Image/BestSeller/"+product.image+".jpg\""+" alt=\"\" class=\"bestSeller-item-img\">" +
+                htmlBSL += "<li class=\" col l-2-4 m-4 c-12\">" +
+                        "<div class=\"bestSeller-product-item\">" +
+                            "<a href = \"\" class=\"bestSeller-item-link\">" +
+                               "<img src = \"./Image/BestSeller/" + product.image + ".jpg\"" + " alt=\"" + product.description + "\" class=\"bestSeller-item-img\">" +
                             "</a>" +
-                            "<span class=\"bestSeller-item-saleOff\">"+product.caculateDiscountPercentage()+"% OFF</span>" +
-                            "<div class=\"bestSeller-item-description\">"+product.description+"</div>" +
+                            "<span class=\"bestSeller-item-saleOff\">" + product.caculateDiscountPercentage() + "% OFF</span>" +
+                            "<div class=\"bestSeller-item-description\">" + product.description + "</div>" +
                             "<div class=\"bestSeller-rating\">" +
                                " <span class=\"rating-star\">" +
                                    " <i class=\"fa-solid fa-star\" style=\"color: #FFD43B;\"></i>" +
@@ -67,16 +67,53 @@ namespace electronic_store
                                    " <i class=\"fa-solid fa-star\" style=\"color: #FFD43B;\"></i>" +
                                    " <i class=\"fa-solid fa-star\" style=\"color: #FFD43B;\"></i>" +
                                 "</span>" +
-                                "<span class=\"rating-sold\">"+product.sold+"</span>" +
+                                "<span class=\"rating-sold\">" + product.sold + "</span>" +
                            " </div>" +
                             "<div class=\"bestSeller-item-price\">" +
-                              "  <span class=\"price-discounted\">"+product.price_discounted+"$</span>" +
-                               " <span class=\"price-origin\">"+product.price_origin+"$</span>" +
+                              "  <span class=\"price-discounted\">" + product.price_discounted + "$</span>" +
+                               " <span class=\"price-origin\">" + product.price_origin + "$</span>" +
                            " </div>" +
                         "</div>" +
                    "</li>";
             }
             bestSellerProduct.InnerHtml = htmlBSL;
+
+            List<Objects.products> listProductAB = (List<Objects.products>)Application["listProduct_Anbernic"];
+            string htmlAB = "";
+            foreach (Objects.products product in listProductAB)
+            {
+                htmlAB += "<li class=\"col l-3 m-6 c-12\">" +
+                                "<div class=\"popular-product-item\">" +
+                                   "<a class=\"popular-item-link\" href=\"\">" +
+                                        "<img class=\"popular-item-img\" src=\"./Image/PopularBrand/Anbernic/" + product.image + ".jpg\" alt=\"" + product.description + "\">" +
+                                        "<span class=\"popular-saleOff\">" + product.caculateDiscountPercentage() + "% OFF</span>" +
+                                    "</a>" +
+                                    "<span class=\"popular-description\">" + product.description + "</span>" +
+                                    "<span class=\"popular-discounted\">" + product.price_discounted + "$</span>" +
+                                    "<span class=\"popular-origin\">" + product.price_origin + "$</span>" +
+                                "</div>" +
+                            "</li>";
+            }
+            popularProductItemAnbernic.InnerHtml = htmlAB;
+
+
+            List<Objects.products> listProductTM = (List<Objects.products>)Application["listProduct_Tronsmart"];
+            string htmlTM = "";
+            foreach(Objects.products product in listProductTM)
+            {
+                htmlTM += "<li class=\"col l-3 m-6 c-12\">"+
+                                "<div class=\"popular-product-item\">"+
+                                    "<a class=\"popular-item-link\" href=\"\">"+
+                                        "<img class=\"popular-item-img\" src=\"./Image/PopularBrand/Tronsmart/"+product.image+".jpg \"alt=\"\">"+
+                                        "<span class=\"popular-saleOff\">"+product.caculateDiscountPercentage()+"% OFF</span>"+
+                                    "</a>"+
+                                    "<span class=\"popular-description\">ANBERNIC RG35XX Plus Game Console</span>"+
+                                    "<span class=\"popular-discounted\">"+product.price_discounted+"$</span>"+
+                                    "<span class=\"popular-origin\">"+product.price_origin+"$</span>" +
+                                "</div>" +
+                            "</li>";
+            }
+            popularProductTronsmart.InnerHtml = htmlTM;
         }
     }
 }

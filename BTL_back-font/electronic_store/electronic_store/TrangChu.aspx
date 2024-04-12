@@ -174,13 +174,13 @@
                 <ul class="popularBrand-product row">
                     <li class="col l-4 m-12 c-12">
                         <a href="" class="popular-brand-link">
-                            <img class="popular-brand-img" src="./img/PopularBrand/anbernic-20230327152657978._p1_.webp"
-                                alt="">
+                            <img class="popular-brand-img" src="./Image/PopularBrand/Anbernic/Anbernic-logo.jpg"
+                                alt="Anbernic">
                         </a>
                     </li>
                     <li class="col l-8 m-12 c-12">
-                        <ul class="popular-product-list row">
-                            <li class="col l-3 m-6 c-12">
+                        <ul class="popular-product-list row" id="popularProductItemAnbernic" runat="server">
+                          <%--  <li class="col l-3 m-6 c-12">
                                 <div class="popular-product-item">
                                     <a class="popular-item-link" href="">
                                         <img class="popular-item-img"
@@ -192,59 +192,21 @@
                                     <span class="popular-discounted">60.88$</span>
                                     <span class="popular-origin">73.06$</span>
                                 </div>
-                            </li>
-                            <li class="col l-3 m-6 c-12">
-                                <div class="popular-product-item">
-                                    <a class="popular-item-link" href="">
-                                        <img class="popular-item-img"
-                                            src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                            alt="">
-                                        <span class="popular-saleOff">17% OFF</span>
-                                    </a>
-                                    <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                                    <span class="popular-discounted">60.88$</span>
-                                    <span class="popular-origin">73.06$</span>
-                                </div>
-                            </li>
-                            <li class="col l-3 m-6 c-12">
-                                <div class="popular-product-item">
-                                    <a class="popular-item-link" href="">
-                                        <img class="popular-item-img"
-                                            src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                            alt="">
-                                        <span class="popular-saleOff">17% OFF</span>
-                                    </a>
-                                    <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                                    <span class="popular-discounted">60.88$</span>
-                                    <span class="popular-origin">73.06$</span>
-                                </div>
-                            </li>
-                            <li class="col l-3 m-6 c-12">
-                                <div class="popular-product-item">
-                                    <a class="popular-item-link" href="">
-                                        <img class="popular-item-img"
-                                            src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                            alt="">
-                                        <span class="popular-saleOff">17% OFF</span>
-                                    </a>
-                                    <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                                    <span class="popular-discounted">60.88$</span>
-                                    <span class="popular-origin">73.06$</span>
-                                </div>
-                            </li>
+                            </li>--%>
+                 
                         </ul>
                     </li>
                 </ul>
                 <ul class="popularBrand-product row">
                     <li class="col l-4 m-12 c-12">
                         <a href="" class="popular-brand-link">
-                            <img class="popular-brand-img" src="./img/PopularBrand/anbernic-20230327152657978._p1_.webp"
-                                alt="">
+                            <img class="popular-brand-img" src="./Image/PopularBrand/Tronsmart/tronsmart-logo.jpg"
+                                alt="Tronsmart">
                         </a>
                     </li>
                     <li class="col l-8 m-12 c-12">
-                        <ul class="popular-product-list row">
-                            <li class="col l-3 m-6 c-12">
+                        <ul class="popular-product-list row" id="popularProductTronsmart" runat="server">
+                          <%--  <li class="col l-3 m-6 c-12">
                                 <div class="popular-product-item">
                                     <a class="popular-item-link" href="">
                                         <img class="popular-item-img"
@@ -256,92 +218,10 @@
                                     <span class="popular-discounted">60.88$</span>
                                     <span class="popular-origin">73.06$</span>
                                 </div>
-                            </li>
-                            <li class="col l-3 m-6 c-12">
-                                <div class="popular-product-item">
-                                    <a class="popular-item-link" href="">
-                                        <img class="popular-item-img"
-                                            src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                            alt="">
-                                        <span class="popular-saleOff">17% OFF</span>
-                                    </a>
-                                    <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                                    <span class="popular-discounted">60.88$</span>
-                                    <span class="popular-origin">73.06$</span>
-                                </div>
-                            </li>
-                            <li class="col l-3 m-6 c-12">
-                                <div class="popular-product-item">
-                                    <a class="popular-item-link" href="">
-                                        <img class="popular-item-img"
-                                            src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                            alt="">
-                                        <span class="popular-saleOff">17% OFF</span>
-                                    </a>
-                                    <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                                    <span class="popular-discounted">60.88$</span>
-                                    <span class="popular-origin">73.06$</span>
-                                </div>
-                            </li>
-                            <li class="col l-3 m-6 c-12">
-                                <div class="popular-product-item">
-                                    <a class="popular-item-link" href="">
-                                        <img class="popular-item-img"
-                                            src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                            alt="">
-                                        <span class="popular-saleOff">17% OFF</span>
-                                    </a>
-                                    <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                                    <span class="popular-discounted">60.88$</span>
-                                    <span class="popular-origin">73.06$</span>
-                                </div>
-                            </li>
+                            </li>  --%>
                         </ul>
                     </li>
                 </ul>
-
-                <!-- <ul class="popularBrand-product">
-                    <a href="" class="popular-brand-link">
-                        <img class="popular-brand-img" src="./img/PopularBrand/anbernic-20230327152657978._p1_.webp"
-                            alt="">
-                    </a>
-                    <ul class="popular-product-list">
-                        <li class="popular-product-item">
-                            <a class="popular-item-link" href="">
-                                <img class="popular-item-img"
-                                    src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                    alt="">
-                                <span class="popular-saleOff">17% OFF</span>
-                            </a>
-                            <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                            <span class="popular-discounted">60.88$</span>
-                            <span class="popular-origin">73.06$</span>
-                        </li>
-                        <li class="popular-product-item">
-                            <a class="popular-item-link" href="">
-                                <img class="popular-item-img"
-                                    src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                    alt="">
-                                <span class="popular-saleOff">17% OFF</span>
-                            </a>
-                            <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                            <span class="popular-discounted">60.88$</span>
-                            <span class="popular-origin">73.06$</span>
-                        </li>
-                        <li class="popular-product-item">
-                            <a class="popular-item-link" href="">
-                                <img class="popular-item-img"
-                                    src="./img/PopularBrand/anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.webp"
-                                    alt="">
-                                <span class="popular-saleOff">17% OFF</span>
-                            </a>
-                            <span class="popular-description">ANBERNIC RG35XX Plus Game Console</span>
-                            <span class="popular-discounted">60.88$</span>
-                            <span class="popular-origin">73.06$</span>
-                        </li>
-                    </ul>
-
-                </ul> -->
             </div>
         </div>
     </section>
@@ -388,11 +268,11 @@
                             <h2 class="connect-item-title">Download The App
                             </h2>
                             <div class="download-apps">
-                                <img class="download-img" src="./img/footer/android_app.png" alt="">
+                                <img class="download-img" src="./Image/Footer/android_app.png" alt="">
                                 <div class="download-icon">
-                                    <img class="download-icon-item" src="./img/footer/google_play.jpg" alt="">
-                                    <img class="download-icon-item" src="./img/footer/app_store.jpg" alt="">
-                                    <img class="download-icon-item" src="./img/footer/gallery.jpg" alt="">
+                                    <img class="download-icon-item" src="./Image/Footer/google_play.jpg" alt="">
+                                    <img class="download-icon-item" src="./Image/Footer/app_store.jpg" alt="">
+                                    <img class="download-icon-item" src="./Image/Footer/gallery.jpg" alt="">
                                 </div>
                                 <div class="connect-item">
                                     <div class="connect-item-mail">
