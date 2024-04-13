@@ -13,3 +13,7 @@
     background-color: var(--main-color);
     width: 100%;
 }
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+}

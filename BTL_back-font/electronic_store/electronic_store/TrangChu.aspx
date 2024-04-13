@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./Fonts/fontawesome-free-6.5.1-web/css/all.min.css" />
 </head>
 <body runat="server">
+    <section class="wrapper">
     <section class="header">
         <div class="header__navbar">
             <div class="grid wide header-container">
@@ -24,11 +25,21 @@
                         <img class="header__navbar-img" src="./Image/Header/Geekbuying.png" alt="">
                     </a>
                 </div>
-                <div class="header__navbar-search">
-                    <input type="text" class="search__input">
-                    <span class="search__btn">
-                        <i class="fa-solid fa-magnifying-glass search__btn-icon"></i>
-                    </span>
+                <div class="header__navbar-navigation">
+                    <div class="grid wide navigation-container">
+                        <div class="navigation__item">
+                            <a href="NewProductPage.aspx" class="navigation__item-link">New</a>
+                        </div>
+                        <div class="navigation__item">
+                            <a href="" class="navigation__item-link">Best Seller</a>
+                        </div>
+                        <div class="navigation__item">
+                            <a href="" class="navigation__item-link">Brand</a>
+                        </div>
+                        <div class="navigation__item">
+                            <a href="" class="navigation__item-link">Flash Sale</a>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="header__navbar-address">
@@ -49,26 +60,7 @@
                     </a>
                 </div>
             </div>
-            <div class="header__navbar-navigation">
-                <div class="grid wide navigation-container">
-                    <div class="navigation__icon">
-                        <i class="fa-solid fa-bars navigation__icon-bars"></i>
-                    </div>
-                    <div class="navigation__item">
-                        <a href="" class="navigation__item-link">New</a>
-                    </div>
-                    <div class="navigation__item">
-                        <a href="" class="navigation__item-link">Best Seller</a>
-                    </div>
-                    <div class="navigation__item">
-                        <a href="" class="navigation__item-link">Brand</a>
-                    </div>
-                    <div class="navigation__item">
-                        <a href="" class="navigation__item-link">Flash Sale</a>
-                    </div>
-                </div>
 
-            </div>
             <div class="header__policy">
                 <div class="grid wide policy-container">
                     <div class="header__policy-return">
@@ -125,7 +117,7 @@
                     <a class="new-header-link" href="">New For You</a>
                     <a href="" class="new-header-seeMore">See More</a>
                 </h2>
-                <ul class="new-product row" id="newProduct" runat="server">                 
+                <ul class="new-product row" id="newProduct" runat="server">
                 </ul>
             </div>
             <div class="content___bestSellers">
@@ -134,7 +126,7 @@
                     <a href="" class="bestSeller-header-seeMore">See More </a>
                 </h2>
                 <ul class="bestSeller-product row" id="bestSellerProduct" runat="server">
-                  <%--  <li class=" col l-2-4 m-4 c-12">
+                    <%--  <li class=" col l-2-4 m-4 c-12">
                         <div class="bestSeller-product-item">
                             <a href="" class="bestSeller-item-link">
                                 <img src="./img/BestSeller/H96-MAX-V58-Android-12-RK3588-8GB-64GB-TV-BOX-8K-decode-517022-0._w280_p1_.webp"
@@ -164,7 +156,6 @@
                         </div>
 
                     </li>--%>
-                    
                 </ul>
             </div>
             <div class="content__popularBrand">
@@ -180,7 +171,7 @@
                     </li>
                     <li class="col l-8 m-12 c-12">
                         <ul class="popular-product-list row" id="popularProductItemAnbernic" runat="server">
-                          <%--  <li class="col l-3 m-6 c-12">
+                            <%--  <li class="col l-3 m-6 c-12">
                                 <div class="popular-product-item">
                                     <a class="popular-item-link" href="">
                                         <img class="popular-item-img"
@@ -193,7 +184,6 @@
                                     <span class="popular-origin">73.06$</span>
                                 </div>
                             </li>--%>
-                 
                         </ul>
                     </li>
                 </ul>
@@ -206,7 +196,7 @@
                     </li>
                     <li class="col l-8 m-12 c-12">
                         <ul class="popular-product-list row" id="popularProductTronsmart" runat="server">
-                          <%--  <li class="col l-3 m-6 c-12">
+                            <%--  <li class="col l-3 m-6 c-12">
                                 <div class="popular-product-item">
                                     <a class="popular-item-link" href="">
                                         <img class="popular-item-img"
@@ -290,6 +280,7 @@
                 </div>
             </div>
         </div>
+    </section>
     </section>
     <script src="./Javascript/slideShow.js"></script>
 </body>

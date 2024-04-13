@@ -72,6 +72,7 @@
     <Content Include="CSS\footer.css" />
     <Content Include="CSS\grid-system.css" />
     <Content Include="CSS\header.css" />
+    <Content Include="CSS\NewProductPage.css" />
     <Content Include="CSS\responsive.css" />
     <Content Include="Fonts\fontawesome-free-6.5.1-web\css\all.css" />
     <Content Include="Fonts\fontawesome-free-6.5.1-web\css\all.min.css" />
@@ -2167,10 +2168,22 @@
     <Content Include="Image\Header\top_free.jpg" />
     <Content Include="Image\Header\top_ship_car.jpg" />
     <Content Include="Image\Header\top_warranty.jpg" />
+    <Content Include="Image\NewItem\2b345e90ecd745a8adcc155a38a89c70-523980-3._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\66355ae64dc94768b9b6deeb80e7d0c6-523979-3._w280_p1_.jpg" />
     <Content Include="Image\NewItem\ESSAGER-30W-USB-A-Type-C-Car-Charger-Black-523839-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\GPD-Win-4--2024--AMD-Ryzen-7-8840U-EU-Plug-523989-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\GXMO-P10-Projector-EU-Plug-523933-1._w280_p1_.jpg" />
     <Content Include="Image\NewItem\HAYEA-Microscope-Camera-523597-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\KUMI-GT6-Pro-Smartwatch-524110-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\KUMI-GW6-Smartwatch-Black-524140-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\KUMI-KU7-Smartwatch-Black-524139-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\LED-Light-Wrist-Strap-Watch-524007-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\M033-Transparent-Wireless-Mouse-White-524058-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\R8-Smart-Ring-Black-S-524115-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\Smart-Touchscreen-Bluetooth-Earbuds-Golden-524006-0._w280_p1_.jpg" />
     <Content Include="Image\NewItem\TANIX-TX1-Mini-TV-Box-523290-0._w280_p1_.jpg" />
     <Content Include="Image\NewItem\USB-Wireless-Adapter-Bluetooth-5-4-524082-0._w280_p1_.jpg" />
+    <Content Include="Image\NewItem\wireless-keyboard-for-ipad-pro-12-9-inch-white-446b74-1711525553813._w280_p1_.jpg" />
     <Content Include="Image\PopularBrand\Anbernic\Anbernic-logo.jpg" />
     <Content Include="Image\PopularBrand\Anbernic\ANBERNIC-RG35XX-H-Game-Console-64GB-128GB---Black-523294-0._w280_p1_.jpg" />
     <Content Include="Image\PopularBrand\Anbernic\anbernic-rg35xx-handheld-game-console-64gb-card-grey-c76ecb-1693877270861._w280_p1_.jpg" />
@@ -2186,6 +2199,7 @@
     <Content Include="Image\SlideShow\1920x480-660a841b2b40c92a18112a3a._p1_.jpg" />
     <Content Include="Image\SlideShow\app_1920_480-65445c3c2b40c943c42ff133._p1_.jpg" />
     <Content Include="Javascript\slideShow.js" />
+    <Content Include="NewProductPage.aspx" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -2193,6 +2207,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="NewProductPage.aspx.cs">
+      <DependentUpon>NewProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewProductPage.aspx.designer.cs">
+      <DependentUpon>NewProductPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\NewProduct.cs" />
     <Compile Include="Objects\products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrangChu.aspx.cs">
