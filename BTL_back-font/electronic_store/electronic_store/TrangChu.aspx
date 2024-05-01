@@ -17,116 +17,130 @@
 </head>
 <body runat="server">
     <section class="wrapper">
-    <section class="header">
-        <div class="header__navbar">
-            <div class="grid wide header-container">
-                <div class="header__navbar-logo">
-                    <a href="TrangChu.aspx" class="header__navbar-link">
-                        <img class="header__navbar-img" src="./Image/Header/Geekbuying.png" alt="">
-                    </a>
-                </div>
-                <div class="header__navbar-navigation">
-                    <div class="grid wide navigation-container">
-                        <div class="navigation__item">
-                            <a href="NewProductPage.aspx" class="navigation__item-link">New</a>
-                        </div>
-                        <div class="navigation__item">
-                            <a href="" class="navigation__item-link">Best Seller</a>
-                        </div>
-                        <div class="navigation__item">
-                            <a href="" class="navigation__item-link">Brand</a>
-                        </div>
-                        <div class="navigation__item">
-                            <a href="" class="navigation__item-link">Flash Sale</a>
-                        </div>
+        <section class="header">
+            <div class="header__navbar">
+                <div class="grid wide header-container">
+                    <div class="header__navbar-logo">
+                        <a href="TrangChu.aspx" class="header__navbar-link">
+                            <img class="header__navbar-img" src="./Image/Header/Geekbuying.png" alt="">
+                        </a>
                     </div>
+                    <div class="header__navbar-navigation">
+                        <div class="grid wide navigation-container">
+                            <div class="navigation__item">
+                                <a href="NewProductPage.aspx" class="navigation__item-link">New</a>
+                            </div>
+                            <div class="navigation__item">
+                                <a href="" class="navigation__item-link">Best Seller</a>
+                            </div>
+                            <div class="navigation__item">
+                                <a href="" class="navigation__item-link">Brand</a>
+                            </div>
+                            <div class="navigation__item">
+                                <a href="" class="navigation__item-link">Flash Sale</a>
+                            </div>
+                        </div>
 
-                </div>
-                <div class="header__navbar-address">
-                    <a href="" class="address__link">
-                        <span class="address__link-label">Ship To</span>
-                        <i class="fa-solid fa-angle-down address__link-icon"></i>
-                    </a>
-                </div>
-                <div class="header__navbar-login">
-                    <a href="" class="login__link">
-                        <span class="login__link-label">Sigin Account</span>
-                        <i class="fa-solid fa-angle-down login__link-icon"></i>
-                    </a>
-                </div>
-                <div class="header__navbar-cart">
-                    <a class="cart__link">
-                        <i class="fa-solid fa-cart-shopping cart__link-icon"></i>
-                    </a>
-                </div>
-            </div>
+                    </div>
+                    <div class="header__navbar-address">
+                        <a href="" class="address__link">
+                            <span class="address__link-label">Ship To</span>
+                            <i class="fa-solid fa-angle-down address__link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="header__navbar-login">
+                        <a href="Login.aspx" class="login__link">
+                            <%if (String.IsNullOrEmpty(Session["CurrentUser"] as String))
+                                {%>                          <span class="login__link-label">Sigin Account</span>
+                            <i class="fa-solid fa-angle-down login__link-icon"></i>
 
-            <div class="header__policy">
-                <div class="grid wide policy-container">
-                    <div class="header__policy-return">
-                        <img src="./Image/Header/top_free.jpg" class="return-icon"></img>
-                        <div class="return-label">
-                            <span class="return-header">FREE RETURNS</span>
-                            <span class="return-description">Within 7 Days</span>
-                        </div>
+                            <%}
+                                else
+                                {%>
+                            <span class="login__link-label""> <% Response.Write(Session["CurrentUser"].ToString());%></span>
+                            <i class="fa-solid fa-user logged"></i>
+                            <% }%>
+                        </a>
                     </div>
-                    <div class="header__policy-shipIn">
-                        <img src="./Image/Header/top_ship_car.jpg" class="shipIn-icon"></img>
-                        <div class="shipIn-label">
-                            <span class="shipIn-header">LOCAL STOCK</span>
-                            <span class="shipIn-description">Ship in 24hrs</span>
-                        </div>
-                    </div>
-                    <div class="header__policy-warranty">
-                        <img src="./Image/Header/top_warranty.jpg" class="warranty-icon"></img>
-                        <div class="warranty-label">
-                            <span class="warranty-header">WARRANTY</span>
-                            <span class="warranty-description">1~2 Year</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header__slideShow">
-            <div class="slideShow-listImg">
-                <img src="./Image/SlideShow/1920x480-65f826922b40c9579ce954e8._p1_.jpg" alt="" class="img">
-                <img src="./Image/SlideShow/1920x480-660404c02b40c968203b8276._p1_.jpg" alt="" class="img">
-                <img src="./Image/SlideShow/1920x480-660a841b2b40c92a18112a3a._p1_.jpg" alt="" class="img">
-                <img src="./Image/SlideShow/app_1920_480-65445c3c2b40c943c42ff133._p1_.jpg" alt="" class="img">
-            </div>
-            <div class="slideShow-btn">
-                <div class="slideShow-left btn">
-                    <i class="fa-solid fa-angle-left"></i>
-                </div>
-                <div class="slideShow-right btn">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-            </div>
+                    <div class="header__navbar-cart">
+                        <a class="cart__link">
+                            <i class="fa-solid fa-cart-shopping cart__link-icon"></i>
+                            <%if (!String.IsNullOrEmpty(Session["CurrentUser"] as String))
+                                {
+%>
+                            <span class="cart__link-notice"><% Response.Write(Session["quantity"].ToString()); %></span>
+                            <%} %>
 
-        </div>
-    </section>
-    <section class="content">
-        <div class="grid wide content-container">
-            <div class="content__deal">
-                <h2 class="deal-header">Deal Of The Day</h2>
-                <div class="deal-product row" id="dealProduct" runat="server">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header__policy">
+                    <div class="grid wide policy-container">
+                        <div class="header__policy-return">
+                            <img src="./Image/Header/top_free.jpg" class="return-icon"></img>
+                            <div class="return-label">
+                                <span class="return-header">FREE RETURNS</span>
+                                <span class="return-description">Within 7 Days</span>
+                            </div>
+                        </div>
+                        <div class="header__policy-shipIn">
+                            <img src="./Image/Header/top_ship_car.jpg" class="shipIn-icon"></img>
+                            <div class="shipIn-label">
+                                <span class="shipIn-header">LOCAL STOCK</span>
+                                <span class="shipIn-description">Ship in 24hrs</span>
+                            </div>
+                        </div>
+                        <div class="header__policy-warranty">
+                            <img src="./Image/Header/top_warranty.jpg" class="warranty-icon"></img>
+                            <div class="warranty-label">
+                                <span class="warranty-header">WARRANTY</span>
+                                <span class="warranty-description">1~2 Year</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="content__new">
-                <h2 class="new-header">
-                    <a class="new-header-link" href="">New For You</a>
-                    <a href="" class="new-header-seeMore">See More</a>
-                </h2>
-                <ul class="new-product row" id="newProduct" runat="server">
-                </ul>
+            <div class="header__slideShow">
+                <div class="slideShow-listImg">
+                    <img src="./Image/SlideShow/1920x480-65f826922b40c9579ce954e8._p1_.jpg" alt="" class="img">
+                    <img src="./Image/SlideShow/1920x480-660404c02b40c968203b8276._p1_.jpg" alt="" class="img">
+                    <img src="./Image/SlideShow/1920x480-660a841b2b40c92a18112a3a._p1_.jpg" alt="" class="img">
+                    <img src="./Image/SlideShow/app_1920_480-65445c3c2b40c943c42ff133._p1_.jpg" alt="" class="img">
+                </div>
+                <div class="slideShow-btn">
+                    <div class="slideShow-left btn">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="slideShow-right btn">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+
             </div>
-            <div class="content___bestSellers">
-                <h2 class="bestSeller-header">
-                    <a href="" class="bestSeller-header-link">Best Sellers </a>
-                    <a href="" class="bestSeller-header-seeMore">See More </a>
-                </h2>
-                <ul class="bestSeller-product row" id="bestSellerProduct" runat="server">
-                    <%--  <li class=" col l-2-4 m-4 c-12">
+        </section>
+        <section class="content">
+            <div class="grid wide content-container">
+                <div class="content__deal">
+                    <h2 class="deal-header">Deal Of The Day</h2>
+                    <div class="deal-product row" id="dealProduct" runat="server">
+                    </div>
+                </div>
+                <div class="content__new">
+                    <h2 class="new-header">
+                        <a class="new-header-link" href="">New For You</a>
+                        <a href="" class="new-header-seeMore">See More</a>
+                    </h2>
+                    <ul class="new-product row" id="newProduct" runat="server">
+                    </ul>
+                </div>
+                <div class="content___bestSellers">
+                    <h2 class="bestSeller-header">
+                        <a href="" class="bestSeller-header-link">Best Sellers </a>
+                        <a href="" class="bestSeller-header-seeMore">See More </a>
+                    </h2>
+                    <ul class="bestSeller-product row" id="bestSellerProduct" runat="server">
+                        <%--  <li class=" col l-2-4 m-4 c-12">
                         <div class="bestSeller-product-item">
                             <a href="" class="bestSeller-item-link">
                                 <img src="./img/BestSeller/H96-MAX-V58-Android-12-RK3588-8GB-64GB-TV-BOX-8K-decode-517022-0._w280_p1_.webp"
@@ -156,22 +170,22 @@
                         </div>
 
                     </li>--%>
-                </ul>
-            </div>
-            <div class="content__popularBrand">
-                <h2 class="popularBrand-header">
-                    <a href="" class="popularBrand-header-link">Popular Brand</a>
-                </h2>
-                <ul class="popularBrand-product row">
-                    <li class="col l-4 m-12 c-12">
-                        <a href="" class="popular-brand-link">
-                            <img class="popular-brand-img" src="./Image/PopularBrand/Anbernic/Anbernic-logo.jpg"
-                                alt="Anbernic">
-                        </a>
-                    </li>
-                    <li class="col l-8 m-12 c-12">
-                        <ul class="popular-product-list row" id="popularProductItemAnbernic" runat="server">
-                            <%--  <li class="col l-3 m-6 c-12">
+                    </ul>
+                </div>
+                <div class="content__popularBrand">
+                    <h2 class="popularBrand-header">
+                        <a href="" class="popularBrand-header-link">Popular Brand</a>
+                    </h2>
+                    <ul class="popularBrand-product row">
+                        <li class="col l-4 m-12 c-12">
+                            <a href="" class="popular-brand-link">
+                                <img class="popular-brand-img" src="./Image/PopularBrand/Anbernic/Anbernic-logo.jpg"
+                                    alt="Anbernic">
+                            </a>
+                        </li>
+                        <li class="col l-8 m-12 c-12">
+                            <ul class="popular-product-list row" id="popularProductItemAnbernic" runat="server">
+                                <%--  <li class="col l-3 m-6 c-12">
                                 <div class="popular-product-item">
                                     <a class="popular-item-link" href="">
                                         <img class="popular-item-img"
@@ -184,19 +198,19 @@
                                     <span class="popular-origin">73.06$</span>
                                 </div>
                             </li>--%>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="popularBrand-product row">
-                    <li class="col l-4 m-12 c-12">
-                        <a href="" class="popular-brand-link">
-                            <img class="popular-brand-img" src="./Image/PopularBrand/Tronsmart/tronsmart-logo.jpg"
-                                alt="Tronsmart">
-                        </a>
-                    </li>
-                    <li class="col l-8 m-12 c-12">
-                        <ul class="popular-product-list row" id="popularProductTronsmart" runat="server">
-                            <%--  <li class="col l-3 m-6 c-12">
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="popularBrand-product row">
+                        <li class="col l-4 m-12 c-12">
+                            <a href="" class="popular-brand-link">
+                                <img class="popular-brand-img" src="./Image/PopularBrand/Tronsmart/tronsmart-logo.jpg"
+                                    alt="Tronsmart">
+                            </a>
+                        </li>
+                        <li class="col l-8 m-12 c-12">
+                            <ul class="popular-product-list row" id="popularProductTronsmart" runat="server">
+                                <%--  <li class="col l-3 m-6 c-12">
                                 <div class="popular-product-item">
                                     <a class="popular-item-link" href="">
                                         <img class="popular-item-img"
@@ -209,78 +223,78 @@
                                     <span class="popular-origin">73.06$</span>
                                 </div>
                             </li>  --%>
-                        </ul>
-                    </li>
-                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="footer">
-        <div class="grid wide ">
-            <div class=" footer-container row">
-                <div class="col l-6">
-                    <div class="footer-support row">
-                        <div class="col l-4">
-                            <div class="support-item">
-                                <h2 class="support-item-title">Support</h2>
-                                <div class="support-information">Shipping Guide</div>
-                                <div class="support-information">Payment information</div>
-                                <div class="support-information">Wholesale</div>
-                                <div class="support-information">Drop shipping</div>
-                                <div class="support-information">Affiliates</div>
+        </section>
+        <section class="footer">
+            <div class="grid wide ">
+                <div class=" footer-container row">
+                    <div class="col l-6">
+                        <div class="footer-support row">
+                            <div class="col l-4">
+                                <div class="support-item">
+                                    <h2 class="support-item-title">Support</h2>
+                                    <div class="support-information">Shipping Guide</div>
+                                    <div class="support-information">Payment information</div>
+                                    <div class="support-information">Wholesale</div>
+                                    <div class="support-information">Drop shipping</div>
+                                    <div class="support-information">Affiliates</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col l-4">
-                            <div class="support-item">
-                                <h2 class="support-item-title">Help</h2>
-                                <div class="support-information">About us</div>
-                                <div class="support-information">Warranty</div>
-                                <div class="support-information">Contact us</div>
-                                <div class="support-information">Order status</div>
-                                <div class="support-information">How to track</div>
+                            <div class="col l-4">
+                                <div class="support-item">
+                                    <h2 class="support-item-title">Help</h2>
+                                    <div class="support-information">About us</div>
+                                    <div class="support-information">Warranty</div>
+                                    <div class="support-information">Contact us</div>
+                                    <div class="support-information">Order status</div>
+                                    <div class="support-information">How to track</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col l-4">
-                            <div class="support-item">
-                                <h2 class="support-item-title">Policies</h2>
-                                <div class="support-information">Terms & conditions</div>
-                                <div class="support-information">Return policy</div>
-                                <div class="support-information">Privacy</div>
-                                <div class="support-information">Delaration</div>
-                                <div class="support-information">Customs</div>
+                            <div class="col l-4">
+                                <div class="support-item">
+                                    <h2 class="support-item-title">Policies</h2>
+                                    <div class="support-information">Terms & conditions</div>
+                                    <div class="support-information">Return policy</div>
+                                    <div class="support-information">Privacy</div>
+                                    <div class="support-information">Delaration</div>
+                                    <div class="support-information">Customs</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col l-6">
-                    <div class="footer-connect row">
-                        <div class="l-6 connect-item">
-                            <h2 class="connect-item-title">Download The App
-                            </h2>
-                            <div class="download-apps">
-                                <img class="download-img" src="./Image/Footer/android_app.png" alt="">
-                                <div class="download-icon">
-                                    <img class="download-icon-item" src="./Image/Footer/google_play.jpg" alt="">
-                                    <img class="download-icon-item" src="./Image/Footer/app_store.jpg" alt="">
-                                    <img class="download-icon-item" src="./Image/Footer/gallery.jpg" alt="">
-                                </div>
-                                <div class="connect-item">
-                                    <div class="connect-item-mail">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        Service@geekbuying.com
+                    <div class="col l-6">
+                        <div class="footer-connect row">
+                            <div class="l-6 connect-item">
+                                <h2 class="connect-item-title">Download The App
+                                </h2>
+                                <div class="download-apps">
+                                    <img class="download-img" src="./Image/Footer/android_app.png" alt="">
+                                    <div class="download-icon">
+                                        <img class="download-icon-item" src="./Image/Footer/google_play.jpg" alt="">
+                                        <img class="download-icon-item" src="./Image/Footer/app_store.jpg" alt="">
+                                        <img class="download-icon-item" src="./Image/Footer/gallery.jpg" alt="">
                                     </div>
-                                    <div class="connect-item-ticket">
-                                        <i class="fa-solid fa-ticket-simple"></i>Ticket
+                                    <div class="connect-item">
+                                        <div class="connect-item-mail">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            Service@geekbuying.com
+                                        </div>
+                                        <div class="connect-item-ticket">
+                                            <i class="fa-solid fa-ticket-simple"></i>Ticket
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </section>
     <script src="./Javascript/slideShow.js"></script>
 </body>

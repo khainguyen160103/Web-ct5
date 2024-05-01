@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static System.Collections.Specialized.BitVector32;
 
 namespace electronic_store
 {
@@ -13,6 +16,7 @@ namespace electronic_store
         {
             List<Objects.products> listProductDD = (List<Objects.products>)Application["listProductDD"];
             string htmlDD = "";
+         
             foreach (Objects.products product in listProductDD)
             {
                 htmlDD += "<div class=\"deal - product - item col l-2 m - 4 c - 6\"> " +
@@ -38,7 +42,7 @@ namespace electronic_store
             {
                 htmlN += "<li class=\" col l-3 m-6 c-6\">" +
                        " <div class=\"new-product-item\">" +
-                            "<a href = \"\" class=\"new-item-link\">" +
+                            "<a href = \"detailProduct.aspx?id="+product.id+"\" class=\"new-item-link\">" +
                                 "<img class=\"new-item-img\" src=\"./Image/NewItem/" + product.image + ".jpg\"" + " alt=\"" + product.description + "\"> " +
                             "</a>" +
                             "<span class=\"new-item-header\">" + product.description + "</span>" +
@@ -54,7 +58,7 @@ namespace electronic_store
             {
                 htmlBSL += "<li class=\" col l-2-4 m-4 c-12\">" +
                         "<div class=\"bestSeller-product-item\">" +
-                            "<a href = \"\" class=\"bestSeller-item-link\">" +
+                            "<a href = \"detailProduct.aspx?id="+product.id+"\" class=\"bestSeller-item-link\">" +
                                "<img src = \"./Image/BestSeller/" + product.image + ".jpg\"" + " alt=\"" + product.description + "\" class=\"bestSeller-item-img\">" +
                             "</a>" +
                             "<span class=\"bestSeller-item-saleOff\">" + product.caculateDiscountPercentage() + "% OFF</span>" +
@@ -84,6 +88,7 @@ namespace electronic_store
             {
                 htmlAB += "<li class=\"col l-3 m-6 c-12\">" +
                                 "<div class=\"popular-product-item\">" +
+                                 "<a href=\"detailProduct.aspx?id=" + product.id + "\">" +
                                    "<a class=\"popular-item-link\" href=\"\">" +
                                         "<img class=\"popular-item-img\" src=\"./Image/PopularBrand/Anbernic/" + product.image + ".jpg\" alt=\"" + product.description + "\">" +
                                         "<span class=\"popular-saleOff\">" + product.caculateDiscountPercentage() + "% OFF</span>" +
@@ -103,7 +108,7 @@ namespace electronic_store
             {
                 htmlTM += "<li class=\"col l-3 m-6 c-12\">"+
                                 "<div class=\"popular-product-item\">"+
-                                    "<a class=\"popular-item-link\" href=\"\">"+
+                                    "<a class=\"popular-item-link\" href=\"detailProduct.aspx?id="+product.id+"\">" +
                                         "<img class=\"popular-item-img\" src=\"./Image/PopularBrand/Tronsmart/"+product.image+".jpg \"alt=\"\">"+
                                         "<span class=\"popular-saleOff\">"+product.caculateDiscountPercentage()+"% OFF</span>"+
                                     "</a>"+
@@ -115,5 +120,9 @@ namespace electronic_store
             }
             popularProductTronsmart.InnerHtml = htmlTM;
         }
+       
+
+        // Usage (in your code)
+        
     }
 }

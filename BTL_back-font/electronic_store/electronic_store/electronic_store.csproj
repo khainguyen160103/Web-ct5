@@ -67,13 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddToCart.aspx" />
+    <Content Include="Cart.aspx" />
     <Content Include="CSS\base.css" />
+    <Content Include="CSS\Cart.css" />
     <Content Include="CSS\content.css" />
+    <Content Include="CSS\detailProduct.css" />
     <Content Include="CSS\footer.css" />
     <Content Include="CSS\grid-system.css" />
     <Content Include="CSS\header.css" />
+    <Content Include="CSS\Login.css" />
     <Content Include="CSS\NewProductPage.css" />
+    <Content Include="CSS\Register.css" />
     <Content Include="CSS\responsive.css" />
+    <Content Include="detailProduct.aspx" />
     <Content Include="Fonts\fontawesome-free-6.5.1-web\css\all.css" />
     <Content Include="Fonts\fontawesome-free-6.5.1-web\css\all.min.css" />
     <Content Include="Fonts\fontawesome-free-6.5.1-web\css\brands.css" />
@@ -2198,14 +2205,47 @@
     <Content Include="Image\SlideShow\1920x480-660404c02b40c968203b8276._p1_.jpg" />
     <Content Include="Image\SlideShow\1920x480-660a841b2b40c92a18112a3a._p1_.jpg" />
     <Content Include="Image\SlideShow\app_1920_480-65445c3c2b40c943c42ff133._p1_.jpg" />
+    <Content Include="Javascript\Cart.js" />
+    <Content Include="Javascript\Login.js" />
+    <Content Include="Javascript\Register.js" />
     <Content Include="Javascript\slideShow.js" />
+    <Content Include="Login.aspx" />
     <Content Include="NewProductPage.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddToCart.aspx.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCart.aspx.designer.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detailProduct.aspx.cs">
+      <DependentUpon>detailProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detailProduct.aspx.designer.cs">
+      <DependentUpon>detailProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewProductPage.aspx.cs">
       <DependentUpon>NewProductPage.aspx</DependentUpon>
@@ -2216,7 +2256,15 @@
     </Compile>
     <Compile Include="Objects\NewProduct.cs" />
     <Compile Include="Objects\products.cs" />
+    <Compile Include="Objects\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.aspx.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
